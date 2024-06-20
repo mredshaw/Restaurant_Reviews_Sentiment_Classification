@@ -5,7 +5,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix
 
-df = pd.read_csv('/Users/mikeredshaw/Documents/Schulich MBAN/AI in Business/Assignment 3 - Ratings/reviews.csv', sep='\t')
+df = pd.read_csv('https://raw.githubusercontent.com/mredshaw/Restaurant_Reviews_Sentiment_Classification/main/data/reviews.csv', sep='\t')
 
 #Map the review score to the sentiment values
 df['Sentiment'] = df['RatingValue'].apply(lambda x: 0 if x in [1, 2] else 1 if x == 3 else 2)
